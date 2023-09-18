@@ -1,4 +1,4 @@
-# greensweep
+# Green Sweep
 
 A platform that incentivizes and facilitates the proper disposal of garbage, employing modern tools like machine learning and ai moderation
 
