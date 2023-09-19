@@ -29,10 +29,14 @@ final passwordController = TextEditingController();
    Navigator.pop(context);
  }
 
- void googleSignIn() {}
+void googleSignIn() {}
 
 void appleSignIn() {}
 
+  //email and password error
+  /*wrongCredentials(){
+
+   }*/
   @override
   Widget build(BuildContext context) {
 
