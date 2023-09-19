@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "965230929951",
+    "project_id": "green-sweep1",
+    "storage_bucket": "green-sweep1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:965230929951:android:193cc5b5ece52d3c9ccd2a",
+        "android_client_info": {
+          "package_name": "com.example.greensweep"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCuNlXRVVPLYZhdb7PCmTr_dhDp8Q6so6Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

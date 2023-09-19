@@ -25,7 +25,7 @@ class SquareTile extends StatelessWidget{
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Image (image: tileIcon.image, width: 150, height: 50,),
+            Image (image: tileIcon.image, width: 50, height: 50,),
             Text(tileText, style: const TextStyle(fontSize: 16, color: Color(0xFFFEFAE0), fontWeight: FontWeight.bold), textAlign: TextAlign.center,) ,
           ],
         ),

@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.greensweep.app-mergeDebugResources-9:/values-night-v8/values-night-v8.xml",
+            "outputFile": "com.example.greensweep.app-mergeDebugResources-13:/values-night-v8/values-night-v8.xml",
             "map": [
                 {
                     "source": "/home/Ethan/development/greensweep/android/app/src/main/res/values-night/styles.xml",

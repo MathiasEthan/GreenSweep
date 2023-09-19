@@ -1,24 +1,45 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:greensweep/components/MyButton.dart';
 import 'package:greensweep/components/MyTextField.dart';
 import 'package:greensweep/components/square_tile.dart';
 
-class LoginPage extends StatelessWidget {
+class LoginPage extends StatefulWidget {
    LoginPage ({super.key});
+
+  @override
+  State<LoginPage> createState() => _LoginPageState();
+}
+
+class _LoginPageState extends State<LoginPage> {
 //credential controllers
-final usernameController = TextEditingController();
+final emailController = TextEditingController();
+
 final passwordController = TextEditingController();
 
 //sign in function
- void signUserIn() {}
+ void signUserIn() async{
+   showDialog(context: context, builder: (builder){
+     return const Center(child: CircularProgressIndicator(),);
+   });
+   await FirebaseAuth.instance.signInWithEmailAndPassword(
+     email: emailController.text,
+     password: passwordController.text,
+   );
+   Navigator.pop(context);
+ }
+
  void googleSignIn() {}
+
 void appleSignIn() {}
+
   @override
   Widget build(BuildContext context) {
 
 
     return Scaffold(
       backgroundColor: const Color(0xFFFEFAE0),
+      resizeToAvoidBottomInset: false,
       body: SingleChildScrollView(
 
         child: Center(
@@ -34,7 +55,7 @@ void appleSignIn() {}
              const SizedBox(height: 10),
               //email
               MyTextField(
-                controller: usernameController,
+                controller: emailController,
                 hintText: 'Email',
                 obscureText: false,
               ),
@@ -45,8 +66,8 @@ void appleSignIn() {}
                 hintText: 'Password',
                 obscureText: true,
               ),
-            
-            
+
+
               //forgot password
               const SizedBox(height: 10),
               const Text('Forgot Password?',
@@ -88,13 +109,12 @@ void appleSignIn() {}
               Row(
                   children: [
                     //google button
-                    Padding(
-                      padding: const EdgeInsets.only(left: 12.0, right: 10.0),
-                      child: SquareTile(onTap: googleSignIn, tileText: "Google", tileIcon: Image.asset('assets/images/google.png'),),
-                    ),
+                    const Spacer(),
+                    SquareTile(onTap: googleSignIn, tileText: "Google", tileIcon: Image.asset('assets/images/google.png')),
                     //apple button
+                    const SizedBox(width: 10),
                     SquareTile(onTap: appleSignIn, tileText: "Apple", tileIcon: Image.asset("assets/images/apple.png")),
-
+                    const Spacer(),
                   ],
                 ),
               const SizedBox(height: 100),
@@ -115,5 +135,4 @@ void appleSignIn() {}
         ),
       );
   }
-
 }
