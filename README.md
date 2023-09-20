@@ -8,4 +8,4 @@ Founded and developed by Ethan Mathias and Moksh Shah.
 
 ## Getting Started
 
-realease coming soon 👀
+coming soon 👀
