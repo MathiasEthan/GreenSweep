@@ -5,16 +5,15 @@ import 'package:greensweep/components/MyTextField.dart';
 import 'package:greensweep/components/square_tile.dart';
 
 class LoginPage extends StatefulWidget {
-   LoginPage ({super.key});
+   const LoginPage ({super.key});
 
   @override
   State<LoginPage> createState() => _LoginPageState();
 }
 
 class _LoginPageState extends State<LoginPage> {
-//credential controllers
+//credential controllers, these store the user's email and password, kinda like a variable our databse can access
 final emailController = TextEditingController();
-
 final passwordController = TextEditingController();
 
 //sign in function
@@ -26,17 +25,16 @@ final passwordController = TextEditingController();
      email: emailController.text,
      password: passwordController.text,
    );
+   // ignore: use_build_context_synchronously
    Navigator.pop(context);
  }
 
 void googleSignIn() {}
-
 void appleSignIn() {}
 
-  //email and password error
-  /*wrongCredentials(){
-
-   }*/
+//wrong email and password errors
+void wrongEmail() {}
+void wrongPassword(){}
   @override
   Widget build(BuildContext context) {
 

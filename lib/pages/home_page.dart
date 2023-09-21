@@ -25,7 +25,7 @@ class HomePage extends StatelessWidget{
         padding: const EdgeInsets.all(60.0),
         child: Center(
           child: Text(
-                "Welcome, you are logged in as " + user!.email!,
+                "Welcome, you are logged in as ${user!.email!}",
                 style: const TextStyle(fontSize: 20),
             ),
         ),
